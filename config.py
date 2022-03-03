@@ -6,6 +6,6 @@ font_size = 50
 font_type = "freesans"
 symbol_gap = 50
 
-NUMBER_OF_TRAILS = 30
-LENGTH_LOW = 30
-LENGTH_HIGH = 50
+NUMBER_OF_TRAILS = 18
+LENGTH_LOW = 20
+LENGTH_HIGH = 35

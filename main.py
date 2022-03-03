@@ -17,17 +17,19 @@ font = pygame.font.Font("MochiyPopOne-Regular.ttf", font_size)
 
 # Creating and rendering the trails
 free_x_positions = np.arange(int(width / symbol_gap))
+
 trails = []
 for i in range(NUMBER_OF_TRAILS):
     trail_symbols = []
+    print(len(free_x_positions))
     x_position = randint(0, len(free_x_positions) - 1)
     x = free_x_positions[x_position] * symbol_gap
     free_x_positions = np.delete(free_x_positions, x_position)
     y = - randint(10, height + 10)
-    speed = 8 + 8 * random()
+    speed = 3 + 3 * random()
     for j in range(randint(LENGTH_LOW, LENGTH_HIGH)):
         if j == 0:
-            if random() > 0.4:
+            if random() > 0.2:
                 trail_symbols.append(Symbol(0, 0, LIGHT_GREEN))
             else:
                 trail_symbols.append(Symbol(0, 0, GREEN))
